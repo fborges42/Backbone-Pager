@@ -1,0 +1,42 @@
+<html
+  <head>
+    <title>BackboneJS pager example</title>
+    <script src="/Scripts/Pager.js"></script>
+  </head>
+  <body>
+    <section class="content">
+      <input type="button" class="btn-search" value="Search" />
+      <table class="table-cars">
+        <caption>Table of cars</caption>
+        <thead>
+          <tr>
+            <th>
+              <div class="text-nowrap">Car brand</div>
+            </th>
+            <th>
+              <div class="text-nowrap">Engine</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="movements-pager" class="text-center">
+        <input type="button" data-fn="First" class="btn-nav" disabled="disabled" value="<<" />
+        <input type="button" data-fn="Previous" class="btn-nav" disabled="disabled" value="Previous" />
+        <img id="loading" src="~/loader.gif" class="hidden" />
+        <input type="button" data-fn="Last" class="btn-nav" value=">>" />
+        <input type="button" data-fn="Next" class="btn-nav" value="Next" />
+      </div>
+    </section>
+  </body>
+</html>
+<script type="text/template" id="template">
+    <tr>
+        <td data-title='CarBrand'>
+            <div ><%= md.get('CarBrand') %></div>
+        </td>
+        <td data-title='Engine'>
+            <div ><%= md.get('Engine') %></div>
+        </td>
+    </tr>
+</script>
