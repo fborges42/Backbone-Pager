@@ -1,0 +1,25 @@
+.float-r{
+  float:right;
+}
+
+.float-l{
+  float:left;
+}
+
+.btn-next:before {
+    content:'next';
+}
+
+.btn-previous:before {
+    content:'previous';
+}
+
+@include mq(max, 720) {
+    .btn-next:before {
+        content:'>';
+    }
+
+    .btn-previous:before {
+        content:'<';
+    }
+}
